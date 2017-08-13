@@ -6,9 +6,7 @@ export default class ExploreView extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.headerContainer}>
-          <View style={styles.titleContainer}>
-            <Text style={styles.title}>Explore</Text>
-          </View>
+          <Text style={styles.title}>Explore</Text>
         </View>
         <ScrollView style={styles.cardContainer} horizontal={true}>
           <View style={styles.card}>
@@ -31,41 +29,20 @@ const styles = StyleSheet.create({
   },
   headerContainer: {
     flexDirection: 'row',
-  },
-  titleContainer: {
-    flex: 1,
-    flexDirection: 'row',
     paddingTop: 18,
     paddingRight: 39,
-    paddingBottom: 18,
+    paddingBottom: 0,
     paddingLeft: 39,
   },
   title: {
     fontWeight: "700",
     fontSize: 24,
-    marginLeft: 15,
     color: '#fff',
-  },
-  arrowContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    paddingTop: 18,
-    paddingRight: 39,
-    paddingBottom: 18,
-    paddingLeft: 39,
-  },
-  arrow: {
-    fontWeight: "700",
-    fontSize: 24,
-    color: '#fff',
-    marginRight: 15,
-    transform: [{rotateZ: '90deg'}],
   },
   cardContainer: {
     flexDirection: 'row',
     paddingBottom: 48,
-    paddingTop: 23,
+    paddingTop: 38,
   },
   card: {
     height: 300,
