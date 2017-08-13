@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 
 export default class ExploreView extends React.Component {
   render() {
@@ -13,10 +13,16 @@ export default class ExploreView extends React.Component {
             <Text style={styles.arrow}>></Text>
           </View>
         </View>
-        <View style={styles.cardContainer}>
+        <ScrollView style={styles.cardContainer} horizontal={true}>
           <View style={styles.card}>
           </View>
-        </View>
+          <View style={styles.card}>
+          </View>
+          <View style={styles.card}>
+          </View>
+          <View style={styles.card}>
+          </View>
+        </ScrollView>
       </View>
     );
   }
@@ -32,7 +38,10 @@ const styles = StyleSheet.create({
   titleContainer: {
     flex: 1,
     flexDirection: 'row',
-    padding: 15,
+    paddingTop: 18,
+    paddingRight: 39,
+    paddingBottom: 18,
+    paddingLeft: 39,
   },
   title: {
     fontWeight: "700",
@@ -44,7 +53,10 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'flex-end',
-    padding: 15,
+    paddingTop: 18,
+    paddingRight: 39,
+    paddingBottom: 18,
+    paddingLeft: 39,
   },
   arrow: {
     fontWeight: "700",
@@ -55,10 +67,18 @@ const styles = StyleSheet.create({
   },
   cardContainer: {
     flexDirection: 'row',
+    paddingBottom: 48,
+    paddingTop: 23,
   },
   card: {
-    height: 230,
-    width: 175,
+    height: 300,
+    width: 254,
     backgroundColor: '#fff',
+    marginLeft: 20,
+    borderRadius: 5,
+    shadowOpacity: 0.25,
+    shadowRadius: 20,
+    shadowColor: '#000',
+    shadowOffset: { height: 0, width: 4 },
   },
 });
