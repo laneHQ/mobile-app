@@ -1,6 +1,5 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
+import React from 'react'
+import { StyleSheet, View } from 'react-native'
 
 // MARK: Components
 import SearchView from '../components/Home/SearchView'
@@ -20,8 +19,5 @@ export default class HomeContainer extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
-});
+})
