@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View, StatusBar, NavigatorIOS } from 'react-native'
 
 // MARK: Components
 import HomeContainer from './src/containers/HomeContainer.js'
@@ -8,7 +8,17 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <HomeContainer />
+        <StatusBar
+          barStyle='dark-content'
+        />
+        <NavigatorIOS
+          initialRoute={{
+            component: HomeContainer,
+            title: 'Home',
+          }}
+          navigationBarHidden={true}
+          style={{flex: 1}}
+        />
       </View>
     );
   }
@@ -17,8 +27,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: 20
   },
 })
