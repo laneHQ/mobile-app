@@ -9,9 +9,6 @@ export default class ExploreView extends React.Component {
           <View style={styles.titleContainer}>
             <Text style={styles.title}>Explore</Text>
           </View>
-          <View style={styles.arrowContainer}>
-            <Text style={styles.arrow}>></Text>
-          </View>
         </View>
         <ScrollView style={styles.cardContainer} horizontal={true}>
           <View style={styles.card}>
